@@ -30,7 +30,9 @@
   },
   "include": [
     "src/frontend",
-    "src/backend"
+    "src/backend",
+    "eslint.config.ts",
+    "vite.config.ts",
   ],
   "exclude": [
     "node_modules",

@@ -6,7 +6,12 @@ export default defineConfig({
     base: './',
     server: {
         port: 5173,
-        strictPort: true
+        strictPort: true,
+        hmr: {
+            protocol: 'ws',
+            host: 'localhost',
+            clientPort: 5173,
+        },
     },
     resolve: {
         alias: {
