@@ -1,0 +1,162 @@
+:root {
+	--cli-bg: #1a1a1a;
+	--cli-text: #e0e0e0;
+	--cli-accent: #ff9090;
+	--cli-dim: #777777;
+
+	--cli-border: 2px solid var(--cli-accent);
+	--cli-font: 'Courier New', Courier, monospace;
+}
+
+body {
+	background-color: var(--cli-bg);
+	color: var(--cli-text);
+	font-family: var(--cli-font);
+	margin: 0;
+	padding-bottom: 4rem;
+	line-height: 1.5;
+}
+
+* {
+	border-radius: 0 !important;
+	box-sizing: border-box;
+}
+
+a {
+	color: var(--cli-accent);
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover {
+	background-color: var(--cli-accent);
+	color: var(--cli-bg);
+}
+
+h1,
+h2,
+h3,
+h4 {
+	text-transform: uppercase;
+	margin-top: 0;
+	border-bottom: var(--cli-border);
+	display: inline-block;
+	padding-right: 1rem;
+}
+
+h2::before,
+h3::before {
+	content: "> ";
+	color: var(--cli-dim);
+}
+
+.nav-container {
+	border-bottom: var(--cli-border);
+	padding: 1rem 0;
+	background: #282828;
+	margin-bottom: 2rem;
+}
+
+.main-nav {
+	display: flex;
+	justify-content: center;
+	gap: 1.5rem;
+}
+
+.main-nav a::before {
+	content: "[";
+	margin-right: 5px;
+	color: var(--cli-dim);
+}
+
+.main-nav a::after {
+	content: "]";
+	margin-left: 5px;
+	color: var(--cli-dim);
+}
+
+.layout-container {
+	padding: 1rem;
+	margin-bottom: 2rem;
+}
+
+.widget-wrapper {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.widget {
+	border: 1px solid var(--cli-dim);
+	padding: 1.5rem;
+	margin-bottom: 1.5rem;
+	background-color: rgba(40, 40, 40, 0.7);
+	position: relative;
+}
+
+.widget:hover {
+	border-color: var(--cli-accent);
+	box-shadow: 4px 4px 0px var(--cli-dim);
+}
+
+.projects-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+}
+
+.tech-stack {
+	margin-top: 1rem;
+	font-size: 0.9em;
+	color: var(--cli-dim);
+	border-top: 1px dashed var(--cli-dim);
+	padding-top: 0.5rem;
+}
+
+.project-links {
+	margin-top: 1.5rem;
+	display: flex;
+	gap: 1rem;
+}
+
+.skills-flex {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.skill-category {
+	flex: 1 1 200px;
+}
+
+.link-list {
+	list-style: none;
+	padding: 0;
+}
+
+.link-item {
+	margin-bottom: 0.5rem;
+}
+
+.link-item a::before {
+	content: "./run ";
+	color: var(--cli-dim);
+}
+
+.header-container {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.header-container h1 {
+	border: 4px double var(--cli-accent);
+	padding: 1rem 2rem;
+}
+
+.footer-container {
+	text-align: center;
+	font-size: 0.8rem;
+	opacity: 0.7;
+	border-top: 1px dashed var(--cli-dim);
+	margin-top: 2rem;
+	padding-top: 1rem;
+}
