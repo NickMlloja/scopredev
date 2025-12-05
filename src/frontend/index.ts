@@ -1,3 +1,5 @@
+import { injectNavBar, injectFooter } from "./page_utils.js";
+
 interface Link {
 	label: string;
 	url: string;
@@ -126,28 +128,13 @@ function renderSkills(skills: Skills): string {
 	return `<div class="skills-flex">${skillHTML}</div>`;
 }
 
-function renderNavbar(): string {
-	return `
-    <nav class="main-nav">
-      	<a href="#links">Links</a>
-      	<a href="#skills">Skills</a>
-      	<a href="#projects">Projects</a>
-      	<a href="#graph">Graph</a>
-      	<a href="#resume">Resume</a>
-    </nav>
-  	`;
-}
-
 function initializeApp(): void {
 
 	const body = document.body;
 	const appRoot = document.createElement('div');
 	appRoot.id = 'portfolio-app-root';
 
-	const navbarHTML = renderLayoutContainer('nav-section', 'nav-container', renderNavbar());
-	const headerHTML = renderLayoutContainer('header-section', 'header-container', `
-    	<h1>Professional Portfolio</h1>
-  	`);
+	const headerHTML = renderLayoutContainer('header-section', 'header-container', `<h1>Portfolio</h1>`);
 
 	const linksHTML = renderLayoutContainer('links-section', 'content-container', `
     	<h2>Connect</h2>
@@ -164,26 +151,24 @@ function initializeApp(): void {
     	${renderProjects(portfolioData.projects)}
   	`);
 
-	const footerHTML = renderLayoutContainer('footer-section', 'footer-container', `
-    	<p>&copy; ${new Date().getFullYear()} Your Name</p>
-  	`);
-
 	appRoot.innerHTML = `
-    	${navbarHTML}
     	${headerHTML}
     	<main>
     	  	${linksHTML}
     	  	${skillsHTML}
     	  	${projectsHTML}
     	</main>
-    	${footerHTML}
   	`;
 
 	body.appendChild(appRoot);
 
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-	initializeApp();
-	console.log('App initialized.');
+document.addEventListener('DOMContentLoaded', (): void => {
+    void (async (): Promise<void> => {
+        initializeApp();
+        await injectNavBar();
+        await injectFooter();
+        console.log('App initialized.');
+    })();
 });
