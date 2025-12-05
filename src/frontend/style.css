@@ -1,7 +1,7 @@
 :root {
 	--cli-bg: #1a1a1a;
 	--cli-text: #e0e0e0;
-	--cli-accent: #ff9090;
+	--cli-accent: rgb(255, 177, 59);
 	--cli-dim: #777777;
 
 	--cli-border: 2px solid var(--cli-accent);
