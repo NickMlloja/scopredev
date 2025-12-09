@@ -1,22 +1,22 @@
 import { injectNavBar, injectFooter } from "./page_utils.js";
 
-interface ProjectStub {
-	title: string;
-	description: string;
-	bg_image?: string;
-	url?: string;
+interface ProjectCard {
+	title: 			string;
+	description: 	string;
+	bg_image?: 		string;
+	url?: 			string;
 }
 
-const stubProjects: ProjectStub[] = [
+const stubProjects: ProjectCard[] = [
 	{
-		title: "Brain-Seg-Fault",
-		description: "A project for my CS659 class at NJIT. The goal is to implement an image segmentation algorithm from a reference research paper across a wider dataset with the hopes of creating a program to streamline the diagnosis process for MRI brain scans. The project for now will be fully on python and besides standard libraries use OpenCV2, Numpy, MatPlotLib.",
-		url: 'TEMPLINK',
+		title: 			"Brain-Seg-Fault",
+		description: 	"A project for my CS659 class at NJIT. The goal is to implement an image segmentation algorithm from a reference research paper across a wider dataset with the hopes of creating a program to streamline the diagnosis process for MRI brain scans. The project for now will be fully on python and besides standard libraries use OpenCV2, Numpy, MatPlotLib.",
+		url: 			'TEMPLINK',
 	},
 	{
-		title: "Modular Maze Generator",
-		description: "This is a tool for generating mazes with the same parameters in bulk. These parameters include Path Color, Wall Color, Number of Rows, Number of Columns, Maze Texture, and Blur Effect. The maze texture can either be straight, wavy, or jagged. The blur effect uses a box based gaussian blur. The default distance of medium being 5, and strong being 10. A custom value may be entered.",
-		url: 'TEMPLINK',
+		title: 			"Modular Maze Generator",
+		description: 	"This is a tool for generating mazes with the same parameters in bulk. These parameters include Path Color, Wall Color, Number of Rows, Number of Columns, Maze Texture, and Blur Effect. The maze texture can either be straight, wavy, or jagged. The blur effect uses a box based gaussian blur. The default distance of medium being 5, and strong being 10. A custom value may be entered.",
+		url: 			'TEMPLINK',
 	},
 ];
 
